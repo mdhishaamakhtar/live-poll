@@ -194,7 +194,7 @@ class PollController {
           choiceId
         }
       };
-      const exists = await Choice.findOne();
+      const exists = await Choice.findOne(filter);
       if (!exists) {
         return {
           error: true,
