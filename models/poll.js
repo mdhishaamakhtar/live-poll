@@ -4,7 +4,7 @@ const logger = require('../logging/logger');
 
 const schema = {
   code: {
-    type: sequelize.INTEGER,
+    type: sequelize.INTEGER
   },
   pollId: {
     type: sequelize.UUID,
@@ -25,7 +25,7 @@ const schema = {
   type: {
     type: sequelize.STRING(255),
     allowNull: false,
-    default: "Poll"
+    default: 'Poll'
   }
 };
 
