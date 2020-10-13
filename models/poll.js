@@ -24,7 +24,8 @@ const schema = {
   },
   type: {
     type: sequelize.STRING(255),
-    allowNull: false
+    allowNull: false,
+    default: "Poll"
   }
 };
 
