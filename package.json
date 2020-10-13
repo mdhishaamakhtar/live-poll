@@ -1,38 +1,50 @@
 {
-    "name": "live-poll",
-    "version": "1.0.0",
-    "description": "<p align=\"center\"> \t<img src=\"https://user-images.githubusercontent.com/30529572/72455010-fb38d400-37e7-11ea-9c1e-8cdeb5f5906e.png\" /> \t<h2 align=\"center\"> Live Poll </h2> \t<h4 align=\"center\"> This is the backend of a live-poll website made by DSC-VIT<h4> </p>",
-    "main": "index.js",
-    "scripts": {
-        "start": "node index.js",
-        "test": "nodemon index.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/mdhishaamakhtar/live-poll.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/mdhishaamakhtar/live-poll/issues"
-    },
-    "homepage": "https://github.com/mdhishaamakhtar/live-poll#readme",
-    "dependencies": {
-        "@hapi/joi": "^17.1.1",
-        "bcrypt-rust-wasm": "^0.1.8",
-        "body-parser": "^1.19.0",
-        "cors": "^2.8.5",
-        "dotenv": "^8.2.0",
-        "express": "^4.17.1",
-        "jsonwebtoken": "^8.5.1",
-        "mongoose": "^5.9.6",
-        "morgan": "^1.10.0",
-        "nodemon": "^2.0.2",
-        "random-number": "0.0.9",
-        "redis": "^3.0.2",
-        "socket.io": "^2.3.0"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.2"
-    }
+  "name": "pollhive-backend",
+  "description": "<p align=\"center\">\r \t<img src=\"https://user-images.githubusercontent.com/30529572/92081025-fabe6f00-edb1-11ea-9169-4a8a61a5dd45.png\" />\r \t<h2 align=\"center\">Node.JS template</h2>\r \t<h4 align=\"center\">A template to quickstart Node.JS REST APIs<h4>\r </p>",
+  "version": "1.0.0",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "semistandard && nyc --reporter=lcov mocha tests/*",
+    "lint": "semistandard --fix",
+    "start": "node server.js",
+    "coverage": "codecov",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharanya02/pollhive-backend.git"
+  },
+  "author": "Sharanya",
+  "bugs": {
+    "url": "https://github.com/sharanya02/pollhive-backend/issues"
+  },
+  "homepage": "https://github.com/sharanya02/pollhive-backend#readme",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.3.3",
+    "pg-hstore": "^2.3.3",
+    "random-number": "0.0.9",
+    "sequelize": "^6.3.5",
+    "uuid4": "^2.0.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "codecov": "^3.7.2",
+    "mocha": "^7.2.0",
+    "nodemon": "^2.0.4",
+    "nyc": "^15.1.0",
+    "semistandard": "^14.2.3"
+  }
 }
