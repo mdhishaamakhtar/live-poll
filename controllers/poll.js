@@ -7,7 +7,7 @@ const logger = require('../logging/logger');
 const random=require("random-number");
 
 class PollController {
-  static async addPoll (userId, title) {
+  static async addPoll (userId, title, type) {
     try {
       const exist = await User.findOne({ where: { userId: userId } });
       if (!exist) {
@@ -26,7 +26,8 @@ class PollController {
         pollId: uuid4(),
         title: title,
         userId: userId,
-        code:random(options)
+        code:random(options),
+        type: type
       };
       const newPoll = await Poll.create(poll);
       return {

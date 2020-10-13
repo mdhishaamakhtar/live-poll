@@ -21,6 +21,10 @@ const schema = {
       model: 'Users',
       key: 'userId'
     }
+  },
+  type: {
+    type: sequelize.STRING(255),
+    allowNull: false
   }
 };
 

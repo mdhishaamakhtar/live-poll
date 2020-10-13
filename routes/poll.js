@@ -3,7 +3,7 @@ const PollController = require('../controllers/poll');
 const router = require('express').Router();
 
 router.post('/create', middlewares.isLoggedIn, async (req, res) => {
-  const response = await PollController.addPoll(req.decoded.userId, req.body.title);
+  const response = await PollController.addPoll(req.decoded.userId, req.body.title, req.body.type);
   res.status(response.code).send(response);
 });
 
