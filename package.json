@@ -34,7 +34,9 @@
     "pg": "^8.3.3",
     "pg-hstore": "^2.3.3",
     "random-number": "0.0.9",
+    "redis": "^3.0.2",
     "sequelize": "^6.3.5",
+    "socket.io": "^2.3.0",
     "uuid4": "^2.0.2",
     "winston": "^3.3.3"
   },
